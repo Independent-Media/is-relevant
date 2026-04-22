@@ -1,4 +1,4 @@
-# is-relevant action (TypeScript, bundled)
+# is-relevant
 
 Drop-in replacement for `tubular-algorithms/is-relevant-action@v4`. Given a list of changed filenames and a config of glob patterns per job, decides which jobs are relevant.
 
