@@ -13,8 +13,8 @@
     "declaration": false,
     "sourceMap": true,
     "outDir": "./lib",
-    "rootDir": "./src"
+    "rootDir": "."
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "lib", "src/**/*.test.ts"]
+  "include": ["./*.ts"],
+  "exclude": ["node_modules", "dist", "lib", "dist-test", "*.test.ts", "tsup.config.ts"]
 }
