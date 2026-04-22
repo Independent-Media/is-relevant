@@ -1,0 +1,25 @@
+{
+  "name": "is-relevant-action",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Decide which CI jobs are relevant for a set of changed files.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test dist-test/*.test.js",
+    "test:build": "tsc -p tsconfig.test.json",
+    "test:all": "npm run test:build && npm test",
+    "all": "npm run typecheck && npm run build && npm run test:all"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "micromatch": "^4.0.8"
+  },
+  "devDependencies": {
+    "@types/micromatch": "^4.0.9",
+    "@types/node": "^20.14.10",
+    "tsup": "^8.5.1",
+    "typescript": "^5.6.3"
+  }
+}

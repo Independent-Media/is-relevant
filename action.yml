@@ -1,0 +1,19 @@
+name: 'Is Relevant'
+description: 'Given a list of changed filenames and a config of glob patterns per job, decide which jobs are relevant.'
+inputs:
+  filenames:
+    description: 'List of changed filenames (whitespace-, newline-, or comma-separated).'
+    required: true
+  config:
+    description: 'JSON config mapping job names to { includes, excludes } comma-separated glob patterns.'
+    required: true
+outputs:
+  relevant:
+    description: 'JSON object mapping job name -> "yes" | "no"'
+  relevant-bool:
+    description: 'JSON object mapping job name -> true | false'
+  jobs-to-run:
+    description: 'JSON array of job names whose value is "yes"'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
