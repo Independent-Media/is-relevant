@@ -9,9 +9,10 @@
     "typecheck": "tsc --noEmit",
     "test": "node --test dist-test/*.test.js",
     "test:build": "tsc -p tsconfig.test.json",
-    "test:all": "npm run test:build && npm test",
-    "all": "npm run typecheck && npm run build && npm run test:all"
+    "test:all": "pnpm run test:build && pnpm test",
+    "all": "pnpm run typecheck && pnpm run build && pnpm run test:all"
   },
+  "packageManager": "pnpm@9.15.9",
   "dependencies": {
     "@actions/core": "^1.11.1",
     "micromatch": "^4.0.8"
